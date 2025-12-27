@@ -114,7 +114,7 @@ const Index = () => {
                       <Icon name="TrendingDown" size={28} className="text-primary" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold mb-2">Экономия до 40%</h3>
+                      <h3 className="text-xl font-bold mb-2">Экономия до 25%</h3>
                       <p className="text-gray-600">Оптимизация бюджета без потери качества работ</p>
                     </div>
                   </div>
