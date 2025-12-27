@@ -46,8 +46,8 @@ const Index = () => {
                 Экономия до 40%
               </Badge>
               
-              <h1 className="text-6xl lg:text-7xl font-black leading-[1.05] tracking-tight">
-                Эффективное бюджетное<span className="block text-primary mt-2">планирование ремонта</span>
+              <h1 className="text-6xl lg:text-7xl font-black leading-[1.05] tracking-tight text-[#000000]">
+                Эффективное бюджетное<span className="block mt-2 text-green-800">планирование ремонта</span>
               </h1>
               
               <p className="text-xl text-gray-600 leading-relaxed max-w-lg">
