@@ -134,7 +134,7 @@ const Index = () => {
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-black mb-4 text-rose-800">Преимущества работы с нами</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="max-w-3xl mx-auto text-[#000000] font-bold text-2xl">
               Профессиональные инструменты и поддержка для контроля бюджета и качества ремонта
             </p>
           </div>
