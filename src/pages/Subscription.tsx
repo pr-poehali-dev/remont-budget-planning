@@ -1,11 +1,21 @@
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import PaymentDialog from '@/components/PaymentDialog';
 
 const Subscription = () => {
+  const [paymentOpen, setPaymentOpen] = useState(false);
+  const [selectedPlan, setSelectedPlan] = useState<any>(null);
+
+  const handleSubscribeClick = (plan: any) => {
+    setSelectedPlan(plan);
+    setPaymentOpen(true);
+  };
+
   const plans = [
     {
       name: 'Базовый',
@@ -108,6 +118,7 @@ const Subscription = () => {
                       ? 'bg-primary hover:bg-primary/90 text-white' 
                       : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
                   }`}
+                  onClick={() => handleSubscribeClick(plan)}
                 >
                   Выбрать план
                 </Button>
@@ -141,6 +152,12 @@ const Subscription = () => {
             <Button 
               size="lg" 
               className="bg-white text-primary hover:bg-gray-100 rounded-full px-8 font-semibold"
+              onClick={() => handleSubscribeClick({
+                name: 'Профессиональный (пробный)',
+                price: 0,
+                period: '7 дней',
+                description: 'Бесплатный тестовый период'
+              })}
             >
               Попробовать бесплатно
               <Icon name="ArrowRight" className="ml-2" size={20} />
@@ -150,6 +167,16 @@ const Subscription = () => {
       </section>
 
       <Footer />
+
+      {selectedPlan && selectedPlan.price > 0 && (
+        <PaymentDialog
+          open={paymentOpen}
+          onOpenChange={setPaymentOpen}
+          amount={selectedPlan.price}
+          description={`Подписка на 1 ${selectedPlan.period}`}
+          itemName={`План "${selectedPlan.name}"`}
+        />
+      )}
     </div>
   );
 };

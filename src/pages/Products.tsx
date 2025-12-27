@@ -1,11 +1,21 @@
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import PaymentDialog from '@/components/PaymentDialog';
 
 const Products = () => {
+  const [paymentOpen, setPaymentOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState<any>(null);
+
+  const handleBuyClick = (product: any) => {
+    setSelectedProduct(product);
+    setPaymentOpen(true);
+  };
+
   const products = [
     {
       icon: 'FileSpreadsheet',
@@ -79,7 +89,10 @@ const Products = () => {
 
                 <div className="flex items-center justify-between pt-4 border-t">
                   <div className="text-3xl font-bold text-primary">{product.price} ₽</div>
-                  <Button className="bg-primary hover:bg-primary/90 text-white rounded-full">
+                  <Button 
+                    className="bg-primary hover:bg-primary/90 text-white rounded-full"
+                    onClick={() => handleBuyClick(product)}
+                  >
                     Купить
                   </Button>
                 </div>
@@ -98,7 +111,15 @@ const Products = () => {
               <span className="text-4xl font-bold text-primary">2590 ₽</span>
               <Badge className="bg-green-100 text-green-700 border-0">Экономия 1170 ₽</Badge>
             </div>
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-full px-8">
+            <Button 
+              size="lg" 
+              className="bg-primary hover:bg-primary/90 text-white rounded-full px-8"
+              onClick={() => handleBuyClick({
+                title: 'Комплексный пакет',
+                description: 'Все 4 продукта со скидкой 30%',
+                price: 2590
+              })}
+            >
               Купить комплект
               <Icon name="ArrowRight" className="ml-2" size={20} />
             </Button>
@@ -107,6 +128,16 @@ const Products = () => {
       </section>
 
       <Footer />
+
+      {selectedProduct && (
+        <PaymentDialog
+          open={paymentOpen}
+          onOpenChange={setPaymentOpen}
+          amount={selectedProduct.price}
+          description={selectedProduct.description}
+          itemName={selectedProduct.title}
+        />
+      )}
     </div>
   );
 };

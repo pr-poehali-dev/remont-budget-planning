@@ -1,0 +1,40 @@
+{
+  "tests": [
+    {
+      "name": "OPTIONS request for CORS",
+      "method": "OPTIONS",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedHeaders": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "POST, OPTIONS"
+      }
+    },
+    {
+      "name": "POST without required fields",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "amount": 1000
+      },
+      "expectedStatus": 400,
+      "expectedBody": {
+        "error": "string"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "POST with valid data structure",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "amount": 990,
+        "description": "Тестовый платёж",
+        "email": "test@example.com",
+        "return_url": "https://example.com/success"
+      },
+      "expectedStatus": 200,
+      "bodyMatcher": "partial"
+    }
+  ]
+}
