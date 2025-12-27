@@ -34,9 +34,9 @@ const Index = () => {
           <img 
             src="https://cdn.poehali.dev/files/0216c67e-e7f2-4177-9117-ee12d8dc9694.jpeg" 
             alt="Современные здания" 
-            className="w-full h-full object-cover opacity-10"
+            className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-white/90 via-white/80 to-primary/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-white/70 via-white/60 to-primary/30"></div>
         </div>
         
         <div className="container mx-auto max-w-7xl relative z-10">
