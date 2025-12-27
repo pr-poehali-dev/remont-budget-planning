@@ -30,7 +30,14 @@ const Index = () => {
       <Navigation />
 
       <section className="relative pt-32 pb-20 px-6 overflow-hidden">
-        <div className="absolute inset-0 z-0 bg-gradient-to-br from-primary/5 via-white to-purple-500/5"></div>
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://cdn.poehali.dev/files/0216c67e-e7f2-4177-9117-ee12d8dc9694.jpeg" 
+            alt="Современные здания" 
+            className="w-full h-full object-cover opacity-10"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-white/90 via-white/80 to-primary/20"></div>
+        </div>
         
         <div className="container mx-auto max-w-7xl relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
