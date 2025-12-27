@@ -237,10 +237,7 @@ const Index = () => {
                   variant="outline"
                   className="border-2 border-white text-white hover:bg-white/10 rounded-full px-8 font-semibold"
                   onClick={() => window.open('https://wa.me/79294390444?text=Здравствуйте!', '_blank')}
-                >
-                  <Icon name="MessageCircle" className="mr-2" size={20} />
-                  Написать в WhatsApp
-                </Button>
+                >Написать в WhatsApp 89294390444</Button>
               </div>
             </div>
           </div>
