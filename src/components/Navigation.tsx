@@ -24,7 +24,7 @@ const Navigation = () => {
             <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
               <Icon name="Home" size={24} className="text-white" />
             </div>
-            <span className="text-4xl font-extrabold text-orange-500">Планируй, экономь, ремонтируй!</span>
+            <span className="font-extrabold text-green-900 text-3xl">Планируй, экономь, ремонтируй!</span>
           </Link>
 
           <div className="hidden lg:flex items-center gap-8">

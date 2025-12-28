@@ -75,12 +75,12 @@ const Index = () => {
 
               <div className="flex items-center gap-8 pt-4">
                 <div>
-                  <div className="text-3xl font-bold">2,500+</div>
+                  <div className="text-3xl font-bold">1,500+</div>
                   <div className="text-sm text-gray-500">Довольных клиентов</div>
                 </div>
                 <div className="w-px h-12 bg-gray-200"></div>
                 <div>
-                  <div className="text-3xl font-bold">₽20M+</div>
+                  <div className="text-3xl font-bold">₽15M+</div>
                   <div className="text-sm text-gray-500">Сэкономлено</div>
                 </div>
                 <div className="w-px h-12 bg-gray-200"></div>
@@ -157,7 +157,7 @@ const Index = () => {
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-black mb-4">Наши услуги</h2>
-            <p className="text-xl text-gray-600">Выберите подходящий формат работы</p>
+            <p className="text-3xl font-semibold text-indigo-700">Выберите подходящий формат работы</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
