@@ -99,8 +99,8 @@ const Index = () => {
                       <Icon name="CheckCircle" size={28} className="text-primary" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold mb-2">Готовые решения</h3>
-                      <p className="text-gray-600">Шаблоны смет, графики работ и чек-листы по этапам ремонта</p>
+                      <h3 className="font-bold mb-2 text-3xl">Готовые решения</h3>
+                      <p className="text-gray-600 font-bold">Шаблоны смет, графики работ и чек-листы по этапам ремонта</p>
                     </div>
                   </div>
                   
@@ -109,8 +109,8 @@ const Index = () => {
                       <Icon name="Users" size={28} className="text-primary" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold mb-2">Экспертная поддержка</h3>
-                      <p className="text-gray-600">Консультации специалистов на всех этапах проекта</p>
+                      <h3 className="font-bold mb-2 text-3xl">Экспертная поддержка</h3>
+                      <p className="text-gray-600 font-bold">Консультации специалистов на всех этапах проекта</p>
                     </div>
                   </div>
                   
@@ -119,8 +119,8 @@ const Index = () => {
                       <Icon name="TrendingDown" size={28} className="text-primary" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold mb-2">Экономия до 25%</h3>
-                      <p className="text-gray-600">Оптимизация бюджета без потери качества работ</p>
+                      <h3 className="font-bold mb-2 text-3xl">Экономия до 25%</h3>
+                      <p className="text-gray-600 font-bold">Оптимизация бюджета без потери качества работ</p>
                     </div>
                   </div>
                 </div>
