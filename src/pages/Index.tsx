@@ -48,7 +48,7 @@ const Index = () => {
                 Эффективное бюджетное<span className="block mt-2 text-green-800">планирование ремонта</span>
               </h1>
               
-              <p className="text-xl text-gray-600 leading-relaxed max-w-lg">
+              <p className="leading-relaxed max-w-lg text-[#000000] text-xl">
                 Готовые шаблоны, графики работ и консультации экспертов для контроля бюджета и сроков
               </p>
               
@@ -166,7 +166,7 @@ const Index = () => {
                 <Icon name="GraduationCap" size={28} className="text-primary" />
               </div>
               <h3 className="text-2xl font-bold mb-3">Курсы</h3>
-              <p className="text-gray-600 mb-6">Обучение принципам бюджетного планирования и составлению графиков работ</p>
+              <p className="mb-6 text-slate-900">Обучение принципам бюджетного планирования и составлению графиков работ</p>
               <Link to="/services">
                 <Button variant="outline" className="w-full border-2 rounded-full">
                   Подробнее
@@ -180,7 +180,7 @@ const Index = () => {
                 <Icon name="Package" size={28} className="text-primary" />
               </div>
               <h3 className="text-2xl font-bold mb-3">Цифровые продукты</h3>
-              <p className="text-gray-600 mb-6">Готовые шаблоны, калькуляторы и чек-листы для самостоятельного планирования</p>
+              <p className="mb-6 text-slate-900">Готовые шаблоны, калькуляторы и чек-листы для самостоятельного планирования</p>
               <Link to="/products">
                 <Button className="w-full bg-primary hover:bg-primary/90 text-white rounded-full">
                   Подробнее
@@ -193,7 +193,7 @@ const Index = () => {
                 <Icon name="Users" size={28} className="text-primary" />
               </div>
               <h3 className="text-2xl font-bold mb-3">Консультации</h3>
-              <p className="text-gray-600 mb-6">Индивидуальная работа с экспертом по вашему проекту ремонта</p>
+              <p className="mb-6 text-slate-900">Индивидуальная работа с экспертом по вашему проекту ремонта</p>
               <Link to="/services">
                 <Button variant="outline" className="w-full border-2 rounded-full">
                   Подробнее

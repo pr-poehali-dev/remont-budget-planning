@@ -48,7 +48,7 @@ const Footer = () => {
               </a>
               <a 
                 href="mailto:vitaliy-chernov-2012@mail.ru" 
-                className="flex items-center gap-2 text-sm text-gray-600 hover:text-primary"
+                className="flex items-center gap-2 text-sm hover:text-primary text-blue-800"
               >
                 <Icon name="Mail" size={16} />
                 Email
