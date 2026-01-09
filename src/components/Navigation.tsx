@@ -10,8 +10,6 @@ const Navigation = () => {
   const navLinks = [
     { path: '/', label: 'Главная' },
     { path: '/services', label: 'Услуги' },
-    { path: '/products', label: 'Продукты' },
-    { path: '/subscription', label: 'Подписка' },
     { path: '/about', label: 'О нас' },
     { path: '/contact', label: 'Контакты' }
   ];
@@ -22,9 +20,9 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
             <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
-              <Icon name="Home" size={24} className="text-white" />
+              <Icon name="Wrench" size={24} className="text-white" />
             </div>
-            <span className="font-extrabold text-green-900 text-3xl">Планируй, экономь, ремонтируй!</span>
+            <span className="font-extrabold text-secondary text-2xl">АвтоСервис PRO</span>
           </Link>
 
           <div className="hidden lg:flex items-center gap-8">
@@ -44,13 +42,12 @@ const Navigation = () => {
           </div>
 
           <div className="hidden lg:block">
-            <Button
-              className="bg-primary hover:bg-primary/90 text-white rounded-full px-6"
-              onClick={() => window.open('https://wa.me/79294390444?text=Здравствуйте!', '_blank')}
-            >
-              <Icon name="MessageCircle" className="mr-2" size={18} />
-              Написать
-            </Button>
+            <Link to="/contact">
+              <Button className="bg-primary hover:bg-primary/90 text-white rounded-full px-6">
+                <Icon name="Phone" className="mr-2" size={18} />
+                Записаться
+              </Button>
+            </Link>
           </div>
 
           <button
@@ -77,16 +74,12 @@ const Navigation = () => {
                 {link.label}
               </Link>
             ))}
-            <Button
-              className="w-full bg-primary hover:bg-primary/90 text-white rounded-full"
-              onClick={() => {
-                window.open('https://wa.me/79294390444?text=Здравствуйте!', '_blank');
-                setMobileMenuOpen(false);
-              }}
-            >
-              <Icon name="MessageCircle" className="mr-2" size={18} />
-              Написать
-            </Button>
+            <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>
+              <Button className="w-full bg-primary hover:bg-primary/90 text-white rounded-full">
+                <Icon name="Phone" className="mr-2" size={18} />
+                Записаться
+              </Button>
+            </Link>
           </div>
         )}
       </div>
